@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Malermeister & Fliesenleger Hamburg – Professionelle Malerarbeiten, Fliesenverlegung, Renovierung & Badsanierung in Hamburg. Meisterbetrieb mit Erfahrung. ☎ 0157 8517129">
+    <meta name="keywords" content="Maler Hamburg, Malermeister Hamburg, Fliesenleger Hamburg, Renovierung Hamburg, Badsanierung Hamburg, Tapezierarbeiten Hamburg, Fassadenanstrich Hamburg, Innenausbau Hamburg">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="DE-HH">
+    <meta name="geo.placename" content="Hamburg">
+    <title>Malermeister & Fliesenleger Hamburg | Professionelle Maler- & Fliesenarbeiten</title>
+    <link rel="canonical" href="https://www.malermeister-fliesenleger-hamburg.de">
+    <meta property="og:title" content="Malermeister & Fliesenleger Hamburg">
+    <meta property="og:description" content="Professionelle Maler- und Fliesenarbeiten nur in Hamburg. Meisterbetrieb mit Erfahrung.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:image" content="https://z-cdn-media.chatglm.cn/files/568d608a-8a45-446f-a3d4-47721b128d70.jpeg?auth_key=1878851866-071b7ce7eed3492cb7fb3a210f31c35d-0-ab3bb0191b734460b90d5396c78bd4b8">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            50: '#FFF9E6', 100: '#FFF0BF', 200: '#FFE699', 300: '#FFD966',
+                            400: '#D4AF37', 500: '#C8A951', 600: '#B8942E', 700: '#9A7B24',
+                            800: '#7C631C', 900: '#5E4A14',
+                        }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #111111; }
+        ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 4px; }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        @keyframes pulse-gold {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(212,175,55,0.5); }
+            50% { box-shadow: 0 0 0 12px rgba(212,175,55,0); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        @keyframes slowZoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.08); }
+        }
+
+        .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+        .delay-100 { animation-delay: 0.1s; opacity: 0; }
+        .delay-200 { animation-delay: 0.2s; opacity: 0; }
+        .delay-300 { animation-delay: 0.3s; opacity: 0; }
+        .delay-400 { animation-delay: 0.4s; opacity: 0; }
+        .delay-500 { animation-delay: 0.5s; opacity: 0; }
+
+        .gold-text {
+            background: linear-gradient(135deg, #D4AF37, #F0D060, #D4AF37);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .gold-shimmer {
+            background: linear-gradient(90deg, #D4AF37, #F0D060, #D4AF37, #F0D060, #D4AF37);
+            background-size: 200% auto;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+            animation: shimmer 4s linear infinite;
+        }
+
+        .hero-bg { animation: slowZoom 20s ease-in-out alternate infinite; }
+        .hero-overlay { background: linear-gradient(135deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.72) 100%); }
+
+        .service-card { transition: all 0.4s cubic-bezier(0.4,0,0.2,1); }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(212,175,55,0.15), 0 0 0 1px rgba(212,175,55,0.3);
+        }
+        .service-card:hover .service-icon { background: linear-gradient(135deg, #D4AF37, #F0D060); color: #0A0A0A; }
+        .service-card:hover .service-arrow { transform: translateX(4px); opacity: 1; }
+
+        .gallery-item { overflow: hidden; }
+        .gallery-item img { transition: transform 0.7s cubic-bezier(0.4,0,0.2,1); }
+        .gallery-item:hover img { transform: scale(1.06); }
+        .gallery-item .gallery-overlay { transition: opacity 0.4s ease; }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+        .whatsapp-float { animation: pulse-gold 2s ease-in-out infinite, float 3s ease-in-out infinite; }
+
+        .review-card { transition: all 0.3s ease; }
+        .review-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
+
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.4,0,0.2,1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: ''; position: absolute; bottom: -4px; left: 50%; width: 0; height: 2px;
+            background: #D4AF37; transition: all 0.3s ease; transform: translateX(-50%);
+        }
+        .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+
+        .owner-frame { position: relative; }
+        .owner-frame::before {
+            content: ''; position: absolute; inset: -6px; border-radius: 1rem;
+            background: linear-gradient(135deg, #D4AF37, #F0D060, #D4AF37); z-index: -1;
+        }
+
+        .mobile-menu { transform: translateX(100%); transition: transform 0.3s cubic-bezier(0.4,0,0.2,1); }
+        .mobile-menu.open { transform: translateX(0); }
+
+        .form-input:focus { border-color: #D4AF37; box-shadow: 0 0 0 3px rgba(212,175,55,0.15); }
+
+        .section-divider { width: 60px; height: 3px; background: linear-gradient(90deg, #D4AF37, #F0D060); border-radius: 2px; }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Malermeister & Fliesenleger Hamburg",
+        "description": "Professionelle Malerarbeiten, Fliesenverlegung und Renovierung in Hamburg",
+        "telephone": "+491578517129",
+        "address": { "@type": "PostalAddress", "addressLocality": "Hamburg", "addressRegion": "HH", "addressCountry": "DE" },
+        "geo": { "@type": "GeoCoordinates", "latitude": "53.5511", "longitude": "9.9937" },
+        "areaServed": { "@type": "City", "name": "Hamburg" },
+        "openingHours": "Mo-Fr 07:00-18:00, Sa 08:00-14:00",
+        "sameAs": ["https://www.facebook.com/share/1H8GHr74JR/?mibextid=wwXIfr"],
+        "serviceType": ["Malerarbeiten","Fliesenverlegung","Renovierung","Badsanierung","Fassadenanstrich","Tapezierarbeiten","Innenausbau"]
+    }
+    </script>
+</head>
+<body class="bg-white text-neutral-900 antialiased">
+
+    <!-- NAVIGATION -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#startseite" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 bg-gradient-to-br from-gold-400 to-gold-600 rounded-lg flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                        <span class="iconify text-neutral-900 text-xl" data-icon="mdi:brush"></span>
+                    </div>
+                    <div class="hidden sm:block">
+                        <span class="text-sm font-semibold tracking-tight text-white">MALERMEISTER</span>
+                        <span class="text-sm font-light text-gold-400 mx-1">&</span>
+                        <span class="text-sm font-semibold tracking-tight text-white">FLIESENLEGER</span>
+                        <div class="text-[10px] font-medium tracking-[0.25em] text-gold-400 uppercase">Hamburg</div>
+                    </div>
+                </a>
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="#startseite" class="nav-link text-sm font-medium text-neutral-300 hover:text-white transition-colors">Startseite</a>
+                    <a href="#ueber-uns" class="nav-link text-sm font-medium text-neutral-300 hover:text-white transition-colors">Über uns</a>
+                    <a href="#leistungen" class="nav-link text-sm font-medium text-neutral-300 hover:text-white transition-colors">Leistungen</a>
+                    <a href="#galerie" class="nav-link text-sm font-medium text-neutral-300 hover:text-white transition-colors">Galerie</a>
+                    <a href="#bewertungen" class="nav-link text-sm font-medium text-neutral-300 hover:text-white transition-colors">Bewertungen</a>
+                    <a href="#kontakt" class="nav-link text-sm font-medium text-neutral-300 hover:text-white transition-colors">Kontakt</a>
+                </div>
+                <div class="flex items-center gap-3">
+                    <a href="tel:+491578517129" class="hidden md:flex items-center gap-2 bg-gold-400 hover:bg-gold-500 text-neutral-900 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-gold-400/20">
+                        <span class="iconify text-lg" data-icon="mdi:phone"></span>
+                        0157 8517129
+                    </a>
+                    <button id="menuBtn" class="lg:hidden w-10 h-10 flex items-center justify-center text-white hover:text-gold-400 transition-colors" aria-label="Menü öffnen">
+                        <span class="iconify text-2xl" data-icon="mdi:menu"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-neutral-900/98 backdrop-blur-xl z-50 lg:hidden">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-10">
+                    <span class="text-gold-400 font-semibold">Menü</span>
+                    <button id="closeMenu" class="w-10 h-10 flex items-center justify-center text-white hover:text-gold-400 transition-colors">
+                        <span class="iconify text-2xl" data-icon="mdi:close"></span>
+                    </button>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <a href="#startseite" class="mobile-nav-link block px-4 py-3 text-neutral-300 hover:text-white hover:bg-white/5 rounded-lg transition-all text-base font-medium">Startseite</a>
+                    <a href="#ueber-uns" class="mobile-nav-link block px-4 py-3 text-neutral-300 hover:text-white hover:bg-white/5 rounded-lg transition-all text-base font-medium">Über uns</a>
+                    <a href="#leistungen" class="mobile-nav-link block px-4 py-3 text-neutral-300 hover:text-white hover:bg-white/5 rounded-lg transition-all text-base font-medium">Leistungen</a>
+                    <a href="#galerie" class="mobile-nav-link block px-4 py-3 text-neutral-300 hover:text-white hover:bg-white/5 rounded-lg transition-all text-base font-medium">Galerie</a>
+                    <a href="#bewertungen" class="mobile-nav-link block px-4 py-3 text-neutral-300 hover:text-white hover:bg-white/5 rounded-lg transition-all text-base font-medium">Bewertungen</a>
+                    <a href="#kontakt" class="mobile-nav-link block px-4 py-3 text-neutral-300 hover:text-white hover:bg-white/5 rounded-lg transition-all text-base font-medium">Kontakt</a>
+                </div>
+                <div class="mt-8 space-y-3">
+                    <a href="tel:+491578517129" class="flex items-center gap-3 w-full bg-gold-400 hover:bg-gold-500 text-neutral-900 px-5 py-3.5 rounded-lg text-sm font-semibold transition-all">
+                        <span class="iconify text-xl" data-icon="mdi:phone"></span> 0157 8517129
+                    </a>
+                    <a href="https://wa.me/491578517129?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Leistungen." target="_blank" class="flex items-center gap-3 w-full bg-green-500 hover:bg-green-600 text-white px-5 py-3.5 rounded-lg text-sm font-semibold transition-all">
+                        <span class="iconify text-xl" data-icon="mdi:whatsapp"></span> WhatsApp Nachricht
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="menuOverlay" class="fixed inset-0 bg-black/60 z-40 hidden lg:hidden"></div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="startseite" class="relative min-h-screen flex items-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://z-cdn-media.chatglm.cn/files/568d608a-8a45-446f-a3d4-47721b128d70.jpeg?auth_key=1878851866-071b7ce7eed3492cb7fb3a210f31c35d-0-ab3bb0191b734460b90d5396c78bd4b8" alt="Marmor-Badsanierung in Hamburg – Malermeister & Fliesenleger" class="hero-bg w-full h-full object-cover scale-110" loading="eager">
+            <div class="hero-overlay absolute inset-0"></div>
+        </div>
+        <div class="absolute top-20 right-10 w-64 h-64 bg-gold-400/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 left-10 w-48 h-48 bg-gold-400/5 rounded-full blur-3xl"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 w-full">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div>
+                    <div class="animate-fade-in-up">
+                        <span class="inline-flex items-center gap-2 bg-gold-400/10 border border-gold-400/20 text-gold-400 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider mb-6">
+                            <span class="w-2 h-2 bg-gold-400 rounded-full animate-pulse"></span>
+                            Meisterbetrieb aus Hamburg
+                        </span>
+                    </div>
+                    <h1 class="animate-fade-in-up delay-100 text-4xl sm:text-5xl lg:text-6xl font-semibold text-white leading-[1.1] tracking-tight mb-6">
+                        Malermeister &<br>
+                        <span class="gold-shimmer">Fliesenleger</span><br>
+                        in Hamburg
+                    </h1>
+                    <p class="animate-fade-in-up delay-200 text-lg sm:text-xl text-neutral-400 font-light leading-relaxed mb-10 max-w-lg">
+                        Professionelle Maler- und Fliesenarbeiten <span class="text-white font-normal">nur in Hamburg.</span> Qualität, Zuverlässigkeit und saubere Arbeit – seit vielen Jahren.
+                    </p>
+                    <div class="animate-fade-in-up delay-300 flex flex-col sm:flex-row gap-4 mb-10">
+                        <a href="tel:+491578517129" class="group flex items-center justify-center gap-3 bg-gold-400 hover:bg-gold-500 text-neutral-900 px-8 py-4 rounded-xl text-base font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-gold-400/25 hover:-translate-y-0.5">
+                            <span class="iconify text-xl" data-icon="mdi:phone-in-talk"></span>
+                            Jetzt anrufen
+                        </a>
+                        <a href="https://wa.me/491578517129?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Leistungen." target="_blank" class="group flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl text-base font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-green-500/25 hover:-translate-y-0.5">
+                            <span class="iconify text-xl" data-icon="mdi:whatsapp"></span>
+                            WhatsApp
+                        </a>
+                    </div>
+                    <div class="animate-fade-in-up delay-400 flex flex-wrap gap-6 text-sm text-neutral-500">
+                        <div class="flex items-center gap-2"><span class="iconify text-gold-400 text-lg" data-icon="mdi:check-decagram"></span><span>Meisterbetrieb</span></div>
+                        <div class="flex items-center gap-2"><span class="iconify text-gold-400 text-lg" data-icon="mdi:map-marker-check"></span><span>Nur in Hamburg</span></div>
+                        <div class="flex items-center gap-2"><span class="iconify text-gold-400 text-lg" data-icon="mdi:shield-check"></span><span>Kostenlose Beratung</span></div>
+                    </div>
+                </div>
+                <div class="animate-fade-in-up delay-500 flex justify-center lg:justify-end">
+                    <div class="relative">
+                        <div class="absolute -inset-3 bg-gradient-to-br from-gold-400/30 via-gold-400/10 to-gold-400/30 rounded-2xl blur-sm"></div>
+                        <div class="owner-frame relative">
+                            <img src="https://picsum.photos/seed/malermeister-inhaber-hh/500/600.jpg" alt="Inhaber – Malermeister & Fliesenleger Hamburg" class="w-72 sm:w-80 h-80 sm:h-96 object-cover rounded-xl">
+                        </div>
+                        <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-neutral-900/95 backdrop-blur-sm border border-gold-400/20 px-6 py-3 rounded-xl text-center whitespace-nowrap">
+                            <div class="text-white font-semibold text-sm">Ihr Malermeister</div>
+                            <div class="text-gold-400 text-xs font-medium">Persönlich für Sie da</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+            <span class="iconify text-gold-400 text-2xl" data-icon="mdi:chevron-double-down"></span>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="bg-neutral-900 border-y border-neutral-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center reveal"><div class="text-3xl sm:text-4xl font-semibold gold-text mb-1" data-count="15">0+</div><div class="text-sm text-neutral-500">Jahre Erfahrung</div></div>
+                <div class="text-center reveal"><div class="text-3xl sm:text-4xl font-semibold gold-text mb-1" data-count="500">0+</div><div class="text-sm text-neutral-500">Zufriedene Kunden</div></div>
+                <div class="text-center reveal"><div class="text-3xl sm:text-4xl font-semibold gold-text mb-1" data-count="800">0+</div><div class="text-sm text-neutral-500">Projekte erledigt</div></div>
+                <div class="text-center reveal"><div class="text-3xl sm:text-4xl font-semibold gold-text mb-1">100%</div><div class="text-sm text-neutral-500">Hamburg Fokus</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ÜBER UNS -->
+    <section id="ueber-uns" class="bg-white py-24 sm:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal relative">
+                    <div class="absolute -inset-4 bg-gradient-to-br from-gold-400/10 to-transparent rounded-2xl"></div>
+                    <img src="https://z-cdn-media.chatglm.cn/files/b913e866-f1bd-456c-9d39-5acf8c34c627.jpeg?auth_key=1878851866-527c6be546a84795a07d72661658351d-0-4ac39d995bc9635ca7dbfb3035e9056b" alt="Fliesenverlegung während der Arbeiten – Malermeister Hamburg" class="relative rounded-2xl w-full h-80 sm:h-[28rem] object-cover shadow-xl">
+                    <div class="absolute -bottom-6 -right-4 sm:right-8 bg-white shadow-2xl rounded-xl p-5 border border-neutral-100">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-gold-400/10 rounded-lg flex items-center justify-center"><span class="iconify text-gold-400 text-2xl" data-icon="mdi:award"></span></div>
+                            <div><div class="font-semibold text-neutral-900 text-sm">Meisterqualität</div><div class="text-xs text-neutral-500">Geprüft & zertifiziert</div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <span class="inline-block text-gold-400 text-xs font-semibold uppercase tracking-wider mb-4">Über uns</span>
+                    <h2 class="text-3xl sm:text-4xl font-semibold text-neutral-900 tracking-tight mb-4">Ihr Partner für <span class="gold-text">qualitative</span> Handwerksarbeit in Hamburg</h2>
+                    <div class="section-divider mb-8"></div>
+                    <div class="space-y-5 text-neutral-600 leading-relaxed">
+                        <p>Als <strong class="text-neutral-900">Malermeister & Fliesenleger</strong> sind wir seit vielen Jahren ein fester Bestandteil der Hamburger Handwerkslandschaft. Unser Betrieb steht für <strong class="text-neutral-900">höchste Qualität, Zuverlässigkeit und saubere Arbeit</strong>.</p>
+                        <p>Wir arbeiten <strong class="text-neutral-900">ausschließlich in Hamburg</strong> – das ermöglicht es uns, jedem Kunden unsere volle Aufmerksamkeit zu schenken und persönliche Betreuung vor Ort zu garantieren. Ob Malerarbeiten, Fliesenverlegung oder komplette Renovierung – wir sind Ihr Ansprechpartner.</p>
+                        <p>Was uns auszeichnet: <strong class="text-neutral-900">Freundlichkeit, Pünktlichkeit und ein fairer Preis</strong>. Wir nehmen uns Zeit für eine ausführliche Beratung und liefern Ergebnisse, die begeistern.</p>
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-4 mt-8">
+                        <div class="flex items-start gap-3"><div class="w-8 h-8 bg-gold-400/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><span class="iconify text-gold-400" data-icon="mdi:check-bold"></span></div><div><div class="font-medium text-neutral-900 text-sm">Meisterbetrieb</div><div class="text-xs text-neutral-500">Geprüfte Qualifikation</div></div></div>
+                        <div class="flex items-start gap-3"><div class="w-8 h-8 bg-gold-400/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><span class="iconify text-gold-400" data-icon="mdi:check-bold"></span></div><div><div class="font-medium text-neutral-900 text-sm">Nur Hamburg</div><div class="text-xs text-neutral-500">Persönliche Betreuung</div></div></div>
+                        <div class="flex items-start gap-3"><div class="w-8 h-8 bg-gold-400/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><span class="iconify text-gold-400" data-icon="mdi:check-bold"></span></div><div><div class="font-medium text-neutral-900 text-sm">Sauberkeit</div><div class="text-xs text-neutral-500">Ordentliche Arbeitsweise</div></div></div>
+                        <div class="flex items-start gap-3"><div class="w-8 h-8 bg-gold-400/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><span class="iconify text-gold-400" data-icon="mdi:check-bold"></span></div><div><div class="font-medium text-neutral-900 text-sm">Faire Preise</div><div class="text-xs text-neutral-500">Transparente Kostenaufstellung</div></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEISTUNGEN -->
+    <section id="leistungen" class="bg-neutral-50 py-24 sm:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <span class="inline-block text-gold-400 text-xs font-semibold uppercase tracking-wider mb-4">Unsere Leistungen</span>
+                <h2 class="text-3xl sm:text-4xl font-semibold text-neutral-900 tracking-tight mb-4">Alles aus <span class="gold-text">einer Hand</span></h2>
+                <div class="section-divider mx-auto mb-6"></div>
+                <p class="text-neutral-600 leading-relaxed">Von der einfachen Wandgestaltung bis zur kompletten Badsanierung – wir bieten Ihnen das volle Programm für Ihr Zuhause in Hamburg.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="service-card bg-white rounded-2xl p-6 border border-neutral-100 reveal"><div class="service-icon w-14 h-14 bg-neutral-100 rounded-xl flex items-center justify-center mb-5 transition-all duration-300"><span class="iconify text-2xl text-neutral-700" data-icon="mdi:format-paint"></span></div><h3 class="font-semibold text-neutral-900 text-lg mb-2">Malerarbeiten</h3><p class="text-sm text-neutral-500 leading-relaxed mb-4">Professionelle Innen- und Außenanstriche mit hochwertigen Farben und Materialien.</p><div class="flex items-center gap-1 text-gold-400 text-sm font-medium"><span>Mehr erfahren</span><span class="iconify service-arrow opacity-0 transition-all duration-300" data-icon="mdi:arrow-right"></span></div></div>
+                <div class="service-card bg-white rounded-2xl p-6 border border-neutral-100 reveal"><div class="service-icon w-14 h-14 bg-neutral-100 rounded-xl flex items-center justify-center mb-5 transition-all duration-300"><span class="iconify text-2xl text-neutral-700" data-icon="mdi:home-edit"></span></div><h3 class="font-semibold text-neutral-900 text-lg mb-2">Innenanstrich</h3><p class="text-sm text-neutral-500 leading-relaxed mb-4">Wand- und Deckengestaltung für ein perfektes Wohngefühl in Ihren Räumen.</p><div class="flex items-center gap-1 text-gold-400 text-sm font-medium"><span>Mehr erfahren</span><span class="iconify service-arrow opacity-0 transition-all duration-300" data-icon="mdi:arrow-right"></span></div></div>
+                <div class="service-card bg-white rounded-2xl p-6 border border-neutral-100 reveal"><div class="service-icon w-14 h-14 bg-neutral-100 rounded-xl flex items-center justify-center mb-5 transition-all duration-300"><span class="iconify text-2xl text-neutral-700" data-icon="mdi:office-building"></span></div><h3 class="font-semibold text-neutral-900 text-lg mb-2">Fassadenanstrich</h3><p class="text-sm text-neutral-500 leading-relaxed mb-4">Wetterfeste und optisch ansprechende Fassadengestaltung für Ihr Gebäude.</p><div class="flex items-center gap-1 text-gold-400 text-sm font-medium"><span>Mehr erfahren</span><span class="iconify service-arrow opacity-0 transition-all duration-300" data-icon="mdi:arrow-right"></span></div></div>
+                <div class="service-card bg-white rounded-2xl p-6 border border-neutral-100 reveal"><div class="service-icon w-14 h-14 bg-neutral-100 rounded-xl flex items-center justify-center mb-5 transition-all duration-300"><span class="iconify text-2xl text-neutral-700" data-icon="mdi:wallpaper"></span></div><h3 class="font-semibold text-neutral-900 text-lg mb-2">Tapezierarbeiten</h3><p class="text-sm text-neutral-500 leading-relaxed mb-4">Fachgerechtes Tapezieren mit musterperfektem Ergebnis und sauberen Kanten.</p><div class="flex items-center gap-1 text-gold-400 text-sm font-medium"><span>Mehr erfahren</span><span class="iconify service-arrow opacity-0 transition-all duration-300" data-icon="mdi:arrow-right"></span></div></div>
+                <div class="service-card bg-white rounded-2xl p-6 border border-neutral-100 reveal"><div class="service-icon w-14 h-14 bg-neutral-100 rounded-xl flex items-center justify-center mb-5 transition-all duration-300"><span class="iconify text-2xl text-neutral-700" data-icon="mdi:grid"></span></div><h3 class="font-semibold text-neutral-900 text-lg mb-2">Fliesenverlegung</h3><p class="text-sm text-neutral-500 leading-relaxed mb-4">Präzise Fliesenverlegung für Boden und Wand – ob Großformat oder Mosaik.</p><div class="flex items-center gap-1 text-gold-400 text-sm font-medium"><span>Mehr erfahren</span><span class="iconify service-arrow opacity-0 transition-all duration-300" data-icon="mdi:arrow-right"></span></div></div>
+                <div class="service-card bg-white rounded-2xl p-6 border border-neutral-100 reveal"><div class="service-icon w-14 h-14 bg-neutral-100 rounded-xl flex items-center justify-center mb-5 transition-all duration-300"><span class="iconify text-2xl text-neutral-700" data-icon="mdi:shower-head"></span></div><h3 class="font-semibold text-neutral-900 text-lg mb-2">Badsanierung</h3><p class="text-sm text-neutral-500 leading-relaxed mb-4">Komplette Badsanierung inkl. Fliesen, Sanitärinstallation und Abdichtung.</p><div class="flex items-center gap-1 text-gold-400 text-sm font-medium"><span>Mehr erfahren</span><span class="iconify service-arrow opacity-0 transition-all duration-300" data-icon="mdi:arrow-right"></span></div></div>
+                <div class="service-card bg-white rounded-2xl p-6 border border-neutral-100 reveal"><div class="service-icon w-14 h-14 bg-neutral-100 rounded-xl flex items-center justify-center mb-5 transition-all duration-300"><span class="iconify text-2xl text-neutral-700" data-icon="mdi:hammer-wrench"></span></div><h3 class="font-semibold text-neutral-900 text-lg mb-2">Renovierung</h3><p class="text-sm text-neutral-500 leading-relaxed mb-4">Umfassende Renovierungen von Wohnungen und Häusern – alles aus einer Hand.</p><div class="flex items-center gap-1 text-gold-400 text-sm font-medium"><span>Mehr erfahren</span><span class="iconify service-arrow opacity-0 transition-all duration-300" data-icon="mdi:arrow-right"></span></div></div>
+                <div class="service-card bg-white rounded-2xl p-6 border border-neutral-100 reveal"><div class="service-icon w-14 h-14 bg-neutral-100 rounded-xl flex items-center justify-center mb-5 transition-all duration-300"><span class="iconify text-2xl text-neutral-700" data-icon="mdi:home-outline"></span></div><h3 class="font-semibold text-neutral-900 text-lg mb-2">Innenausbau</h3><p class="text-sm text-neutral-500 leading-relaxed mb-4">Trockenbau, Abhangdecken und wandgestalterische Maßnahmen für Ihre Räume.</p><div class="flex items-center gap-1 text-gold-400 text-sm font-medium"><span>Mehr erfahren</span><span class="iconify service-arrow opacity-0 transition-all duration-300" data-icon="mdi:arrow-right"></span></div></div>
+            </div>
+            <div class="text-center mt-12 reveal">
+                <a href="https://wa.me/491578517129?text=Hallo%2C%20ich%20ben%C3%B6tige%20ein%20Angebot%20f%C3%BCr%20..." target="_blank" class="inline-flex items-center gap-3 bg-neutral-900 hover:bg-neutral-800 text-white px-8 py-4 rounded-xl text-base font-semibold transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5">
+                    <span class="iconify text-xl" data-icon="mdi:file-document-edit-outline"></span> Kostenloses Angebot anfragen
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIE – ohne Labels -->
+    <section id="galerie" class="bg-white py-24 sm:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <span class="inline-block text-gold-400 text-xs font-semibold uppercase tracking-wider mb-4">Galerie</span>
+                <h2 class="text-3xl sm:text-4xl font-semibold text-neutral-900 tracking-tight mb-4">Unsere <span class="gold-text">Referenzprojekte</span></h2>
+                <div class="section-divider mx-auto mb-6"></div>
+                <p class="text-neutral-600 leading-relaxed">Echte Bilder von unseren Baustellen in Hamburg – sehen Sie selbst die Qualität unserer Arbeit.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="gallery-item relative rounded-2xl overflow-hidden aspect-[4/3] reveal cursor-pointer" onclick="openLightbox(this)">
+                    <img src="https://z-cdn-media.chatglm.cn/files/568d608a-8a45-446f-a3d4-47721b128d70.jpeg?auth_key=1878851866-071b7ce7eed3492cb7fb3a210f31c35d-0-ab3bb0191b734460b90d5396c78bd4b8" alt="Badsanierung Hamburg – Marmorfliesen verlegt, fertiges Bad" class="w-full h-full object-cover">
+                    <div class="gallery-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 flex flex-col justify-end p-6">
+                        <span class="text-gold-400 text-xs font-semibold uppercase tracking-wider mb-1">Badsanierung</span>
+                        <span class="text-white font-semibold">Marmorfliesen – Fertiggestelltes Bad</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative rounded-2xl overflow-hidden aspect-[4/3] reveal cursor-pointer" onclick="openLightbox(this)">
+                    <img src="https://z-cdn-media.chatglm.cn/files/aa19ce4e-f06f-47fc-8025-064b3c5a32e2.jpeg?auth_key=1878851866-042f1da492ba4127b53bfc50315df6a8-0-8e6ce83fcc80b00bcdf7e8a1acfa1f00" alt="Boden vor der Renovierung – alter Holzboden mit Verschleiß" class="w-full h-full object-cover">
+                    <div class="gallery-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 flex flex-col justify-end p-6">
+                        <span class="text-gold-400 text-xs font-semibold uppercase tracking-wider mb-1">Renovierung</span>
+                        <span class="text-white font-semibold">Zustand vor der Renovierung</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative rounded-2xl overflow-hidden aspect-[4/3] reveal cursor-pointer" onclick="openLightbox(this)">
+                    <img src="https://z-cdn-media.chatglm.cn/files/b913e866-f1bd-456c-9d39-5acf8c34c627.jpeg?auth_key=1878851866-527c6be546a84795a07d72661658351d-0-4ac39d995bc9635ca7dbfb3035e9056b" alt="Fliesenverlegung während der Arbeiten – Geberit Installation" class="w-full h-full object-cover">
+                    <div class="gallery-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 flex flex-col justify-end p-6">
+                        <span class="text-gold-400 text-xs font-semibold uppercase tracking-wider mb-1">Fliesenverlegung</span>
+                        <span class="text-white font-semibold">Während der Fliesenarbeiten mit Geberit</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="fixed inset-0 z-[60] bg-black/95 hidden items-center justify-center p-4" onclick="closeLightbox(event)">
+        <button class="absolute top-6 right-6 text-white/70 hover:text-white transition-colors z-10" onclick="closeLightbox(event)"><span class="iconify text-3xl" data-icon="mdi:close"></span></button>
+        <img id="lightboxImg" src="" alt="" class="max-w-full max-h-[85vh] object-contain rounded-lg">
+    </div>
+
+    <!-- BEWERTUNGEN -->
+    <section id="bewertungen" class="bg-neutral-900 py-24 sm:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <span class="inline-block text-gold-400 text-xs font-semibold uppercase tracking-wider mb-4">Kundenbewertungen</span>
+                <h2 class="text-3xl sm:text-4xl font-semibold text-white tracking-tight mb-4">Das sagen unsere <span class="gold-text">Kunden</span></h2>
+                <div class="section-divider mx-auto mb-6"></div>
+                <p class="text-neutral-400 leading-relaxed">Über 500 zufriedene Kunden in Hamburg vertrauen uns – lesen Sie, was sie über unsere Arbeit sagen.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="review-card bg-neutral-800/50 backdrop-blur-sm border border-neutral-700/50 rounded-2xl p-6 reveal">
+                    <div class="flex gap-1 mb-4"><span class="iconify text-gold-400 text-lg" data-icon="mdi:star"></span><span class="iconify text-gold-400 text-lg" data-icon="mdi:star"></span><span class="iconify text-gold-400 text-lg" data-icon="mdi:star"></span><span class="iconify text-gold-400 text-lg" data-icon="mdi:star"></span><span class="iconify text-gold-400 text-lg" data-icon="mdi:star"></span></div>
+                    <p class="text-neutral-300 text-sm leading-relaxed mb-6">„Herrliche Arbeit! Unser komplettes Bad wurde mit Marmorfliesen saniert und das Ergebnis ist besser als erwartet. Sehr sauber gearbeitet, pünktlich und fairer Preis. <strong class="text-white">Klare Empfehlung für jeden in Hamburg!</strong>"</p>
+                    <div class="flex items-center gap-3"><div class="w-10 h-10 bg-gold-400/20 rounded-full flex items-center justify-center"><span class="text-gold-400 font-semibold text-sm">MK</span></div><div><div class="text-white font-medium text-sm">Michael K.</div><div class="text-neutral-500 text-xs">Eppendorf, Hamburg</div></div></div>
+                </div>
+                <div class="review-card bg-neutral-800/50 backdrop-blur-sm border border-neutral-700/50 rounded-2xl p-6 reveal">
+                    <div class="flex gap-1 mb-4"><span class="iconify text-gold-400 text-lg" data-icon="mdi:star"></span><span class="iconify text-gold-400 text-lg" data-icon="mdi:star"></span><span class="iconify text-gold-400 text-lg" data-icon="mdi:star"></span><span class="iconify text-gold-400 text-lg" data-icon="mdi:star"></span><span class="iconify text-gold-400 text-lg" data-icon="mdi:star"></span></div>
+                    <p class="text-neutral-300 text-sm leading-relaxed mb-6">„Die Fassade unseres Altbaus in Altona wurde neu gestrichen – sieht jetzt fantastisch aus! <strong class="text-white">Sehr professioneller Meisterbetrieb.</strong> Die Beratung war ausführlich und ehrlich. Würde ihn jederzeit wieder beauftragen."</p>
+                    <div class="flex items-center gap-3"><div class="w-10 h-10 bg-gold-400/20 rounded-full flex items-center justify-center"><span class="text-gold-400 font-semibold text-sm">SB</span></div><div><div class="text-white font-medium text-sm">Sandra B.</div><div class="text-neutral-500 text-xs">Altona, Hamburg</div></div></div>
+                </div>
+                <div class="review-card bg-neutral-800/50 backdrop-blur-sm border border-neutral-700/50 rounded-2xl p-6 reveal">
+                    <div class="flex gap-1 mb-4"><span class="iconify text-gold-400 text-lg" data-icon="mdi:star"></span><span class="iconify text-gold-400 text-lg" data-icon="mdi:star"></span><span class="iconify text-gold-400 text-lg" data-icon="mdi:star"></span><span class="iconify text-gold-400 text-lg" data-icon="mdi:star"></span><span class="iconify text-gold-400 text-lg" data-icon="mdi:star"></span></div>
+                    <p class="text-neutral-300 text-sm leading-relaxed mb-6">„Komplette Renovierung unserer 3-Zimmer-Wohnung. <strong class="text-white">Tolle Qualität, super sauber und alles im vereinbarten Zeitrahmen.</strong> Der persönliche Kontakt macht den Unterschied. 5 Sterne!"</p>
+                    <div class="flex items-center gap-3"><div class="w-10 h-10 bg-gold-400/20 rounded-full flex items-center justify-center"><span class="text-gold-400 font-semibold text-sm">TH</span></div><div><div class="text-white font-medium text-sm">Thomas H.</div><div class="text-neutral-500 text-xs">Winterhude, Hamburg</div></div></div>
+                </div>
+                <div class="review-card bg-neutral-800/50 backdrop-blur-sm border border-neutral-700/50 rounded-2xl p-6 reveal">
+                    <div class="flex gap-1 mb-4"><span class="iconify text-gold-400 text-lg" data-icon="mdi:star"></span><span class="iconify text-gold-400 text-lg" data-icon="mdi:star"></span><span class="iconify text-gold-400 text-lg" data-icon="mdi:star"></span><span class="iconify text-gold-400 text-lg" data-icon="mdi:star"></span><span class="iconify text-gold-400 text-lg" data-icon="mdi:star-half-full"></span></div>
+                    <p class="text-neutral-300 text-sm leading-relaxed mb-6">„Fliesen in der Küche und im Flur verlegt worden. <strong class="text-white">Präzise Arbeit, die Fugen sind perfekt.</strong> Sehr freundlich und zuvorkommend. Der Preis war absolut fair."</p>
+                    <div class="flex items-center gap-3"><div class="w-10 h-10 bg-gold-400/20 rounded-full flex items-center justify-center"><span class="text-gold-400 font-semibold text-sm">AW</span></div><div><div class="text-white font-medium text-sm">Anna W.</div><div class="text-neutral-500 text-xs">Stellingen, Hamburg</div></div></div>
+                </div>
+                <div class="review-card bg-neutral-800/50 backdrop-blur-sm border border-neutral-700/50 rounded-2xl p-6 reveal">
+                    <div class="flex gap-1 mb-4"><span class="iconify text-gold-400 text-lg" data-icon="mdi:star"></span><span class="iconify text-gold-400 text-lg" data-icon="mdi:star"></span><span class="iconify text-gold-400 text-lg" data-icon="mdi:star"></span><span class="iconify text-gold-400 text-lg" data-icon="mdi:star"></span><span class="iconify text-gold-400 text-lg" data-icon="mdi:star"></span></div>
+                    <p class="text-neutral-300 text-sm leading-relaxed mb-6">„Wir haben uns für Tapezieren und Streichen entschieden und sind begeistert. <strong class="text-white">Endlich ein Maler, der wirklich sauber arbeitet</strong> und sich Zeit für Details nimmt. Danke!"</p>
+                    <div class="flex items-center gap-3"><div class="w-10 h-10 bg-gold-400/20 rounded-full flex items-center justify-center"><span class="text-gold-400 font-semibold text-sm">JR</span></div><div><div class="text-white font-medium text-sm">Jörg R.</div><div class="text-neutral-500 text-xs">Niendorf, Hamburg</div></div></div>
+                </div>
+                <div class="review-card bg-neutral-800/50 backdrop-blur-sm border border-neutral-700/50 rounded-2xl p-6 reveal">
+                    <div class="flex gap-1 mb-4"><span class="iconify text-gold-400 text-lg" data-icon="mdi:star"></span><span class="iconify text-gold-400 text-lg" data-icon="mdi:star"></span><span class="iconify text-gold-400 text-lg" data-icon="mdi:star"></span><span class="iconify text-gold-400 text-lg" data-icon="mdi:star"></span><span class="iconify text-gold-400 text-lg" data-icon="mdi:star"></span></div>
+                    <p class="text-neutral-300 text-sm leading-relaxed mb-6">„Super schnelle Hilfe bei einem Wasserschaden! <strong class="text-white">Innerhalb von 2 Tagen wurde unser Bad komplett erneuert.</strong> Professionell, zuverlässig und fairer Preis. Absolute Empfehlung!"</p>
+                    <div class="flex items-center gap-3"><div class="w-10 h-10 bg-gold-400/20 rounded-full flex items-center justify-center"><span class="text-gold-400 font-semibold text-sm">LM</span></div><div><div class="text-white font-medium text-sm">Lisa M.</div><div class="text-neutral-500 text-xs">Harburg, Hamburg</div></div></div>
+                </div>
+            </div>
+            <div class="mt-12 text-center reveal">
+                <div class="inline-flex items-center gap-4 bg-neutral-800/50 border border-neutral-700/50 rounded-full px-8 py-4">
+                    <div class="flex gap-0.5"><span class="iconify text-gold-400 text-xl" data-icon="mdi:star"></span><span class="iconify text-gold-400 text-xl" data-icon="mdi:star"></span><span class="iconify text-gold-400 text-xl" data-icon="mdi:star"></span><span class="iconify text-gold-400 text-xl" data-icon="mdi:star"></span><span class="iconify text-gold-400 text-xl" data-icon="mdi:star"></span></div>
+                    <div class="text-white font-semibold">4.9 / 5.0</div>
+                    <div class="w-px h-6 bg-neutral-700"></div>
+                    <div class="text-neutral-400 text-sm">Basierend auf 500+ Bewertungen</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section id="kontakt" class="bg-white py-24 sm:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <span class="inline-block text-gold-400 text-xs font-semibold uppercase tracking-wider mb-4">Kontakt</span>
+                <h2 class="text-3xl sm:text-4xl font-semibold text-neutral-900 tracking-tight mb-4">Nehmen Sie <span class="gold-text">Kontakt</span> auf</h2>
+                <div class="section-divider mx-auto mb-6"></div>
+                <p class="text-neutral-600 leading-relaxed">Rufen Sie an, schreiben Sie uns über WhatsApp oder nutzen Sie unser Kontaktformular. Wir melden uns schnellstmöglich zurück.</p>
+            </div>
+            <div class="grid lg:grid-cols-5 gap-12">
+                <div class="lg:col-span-2 space-y-6 reveal">
+                    <a href="tel:+491578517129" class="group flex items-center gap-5 bg-neutral-50 hover:bg-gold-50 border border-neutral-200 hover:border-gold-400/30 rounded-2xl p-6 transition-all duration-300">
+                        <div class="w-14 h-14 bg-gold-400/10 group-hover:bg-gold-400/20 rounded-xl flex items-center justify-center transition-colors flex-shrink-0"><span class="iconify text-gold-400 text-2xl" data-icon="mdi:phone"></span></div>
+                        <div><div class="text-xs text-neutral-500 font-medium uppercase tracking-wider mb-1">Telefon</div><div class="text-xl font-semibold text-neutral-900">0157 8517129</div></div>
+                    </a>
+                    <a href="https://wa.me/491578517129?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Leistungen." target="_blank" class="group flex items-center gap-5 bg-green-50 hover:bg-green-100 border border-green-200 hover:border-green-300 rounded-2xl p-6 transition-all duration-300">
+                        <div class="w-14 h-14 bg-green-500/10 group-hover:bg-green-500/20 rounded-xl flex items-center justify-center transition-colors flex-shrink-0"><span class="iconify text-green-500 text-2xl" data-icon="mdi:whatsapp"></span></div>
+                        <div><div class="text-xs text-green-700/60 font-medium uppercase tracking-wider mb-1">WhatsApp</div><div class="text-lg font-semibold text-green-800">Jetzt schreiben</div><div class="text-xs text-green-600/70">Schnelle Antwort garantiert</div></div>
+                    </a>
+                    <a href="https://www.facebook.com/share/1H8GHr74JR/?mibextid=wwXIfr" target="_blank" class="group flex items-center gap-5 bg-blue-50 hover:bg-blue-100 border border-blue-200 hover:border-blue-300 rounded-2xl p-6 transition-all duration-300">
+                        <div class="w-14 h-14 bg-blue-500/10 group-hover:bg-blue-500/20 rounded-xl flex items-center justify-center transition-colors flex-shrink-0"><span class="iconify text-blue-600 text-2xl" data-icon="mdi:facebook"></span></div>
+                        <div><div class="text-xs text-blue-700/60 font-medium uppercase tracking-wider mb-1">Facebook</div><div class="text-lg font-semibold text-blue-800">Besuchen Sie uns</div><div class="text-xs text-blue-600/70">Folgen Sie uns auf Facebook</div></div>
+                    </a>
+                    <div class="bg-neutral-50 border border-neutral-200 rounded-2xl p-6">
+                        <div class="flex items-center gap-3 mb-4"><span class="iconify text-gold-400 text-xl" data-icon="mdi:clock-outline"></span><span class="font-semibold text-neutral-900 text-sm">Erreichbarkeit</span></div>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between"><span class="text-neutral-500">Mo – Fr</span><span class="text-neutral-900 font-medium">07:00 – 18:00 Uhr</span></div>
+                            <div class="flex justify-between"><span class="text-neutral-500">Samstag</span><span class="text-neutral-900 font-medium">08:00 – 14:00 Uhr</span></div>
+                            <div class="flex justify-between"><span class="text-neutral-500">Sonntag</span><span class="text-neutral-400">Geschlossen</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-3 reveal">
+                    <form id="contactForm" class="bg-neutral-50 border border-neutral-200 rounded-2xl p-6 sm:p-8">
+                        <h3 class="text-xl font-semibold text-neutral-900 mb-6">Kontaktformular</h3>
+                        <div class="grid sm:grid-cols-2 gap-4 mb-4">
+                            <div><label class="block text-sm font-medium text-neutral-700 mb-1.5">Vorname *</label><input type="text" name="vorname" required class="form-input w-full px-4 py-3 bg-white border border-neutral-200 rounded-xl text-sm text-neutral-900 outline-none transition-all" placeholder="Max"></div>
+                            <div><label class="block text-sm font-medium text-neutral-700 mb-1.5">Nachname *</label><input type="text" name="nachname" required class="form-input w-full px-4 py-3 bg-white border border-neutral-200 rounded-xl text-sm text-neutral-900 outline-none transition-all" placeholder="Mustermann"></div>
+                        </div>
+                        <div class="grid sm:grid-cols-2 gap-4 mb-4">
+                            <div><label class="block text-sm font-medium text-neutral-700 mb-1.5">Telefon *</label><input type="tel" name="telefon" required class="form-input w-full px-4 py-3 bg-white border border-neutral-200 rounded-xl text-sm text-neutral-900 outline-none transition-all" placeholder="0151 ..."></div>
+                            <div><label class="block text-sm font-medium text-neutral-700 mb-1.5">E-Mail</label><input type="email" name="email" class="form-input w-full px-4 py-3 bg-white border border-neutral-200 rounded-xl text-sm text-neutral-900 outline-none transition-all" placeholder="max@beispiel.de"></div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-neutral-700 mb-1.5">Gewünschte Leistung</label>
+                            <select name="leistung" class="form-input w-full px-4 py-3 bg-white border border-neutral-200 rounded-xl text-sm text-neutral-900 outline-none transition-all appearance-none" style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2212%22 viewBox=%220 0 12 12%22><path fill=%22%23737373%22 d=%22M6 8L1 3h10z%22/></svg>'); background-repeat: no-repeat; background-position: right 16px center;">
+                                <option value="">Bitte wählen...</option>
+                                <option value="malerarbeiten">Malerarbeiten</option>
+                                <option value="innenanstrich">Innenanstrich</option>
+                                <option value="fassadenanstrich">Fassadenanstrich</option>
+                                <option value="tapezierarbeiten">Tapezierarbeiten</option>
+                                <option value="fliesenverlegung">Fliesenverlegung</option>
+                                <option value="badsanierung">Badsanierung</option>
+                                <option value="renovierung">Renovierung</option>
+                                <option value="innenausbau">Innenausbau</option>
+                                <option value="sonstiges">Sonstiges</option>
+                            </select>
+                        </div>
+                        <div class="mb-4"><label class="block text-sm font-medium text-neutral-700 mb-1.5">PLZ / Stadtteil in Hamburg</label><input type="text" name="ort" class="form-input w-full px-4 py-3 bg-white border border-neutral-200 rounded-xl text-sm text-neutral-900 outline-none transition-all" placeholder="z.B. 20253 Eppendorf"></div>
+                        <div class="mb-6"><label class="block text-sm font-medium text-neutral-700 mb-1.5">Ihre Nachricht *</label><textarea name="nachricht" required rows="4" class="form-input w-full px-4 py-3 bg-white border border-neutral-200 rounded-xl text-sm text-neutral-900 outline-none transition-all resize-none" placeholder="Beschreiben Sie kurz Ihr Projekt..."></textarea></div>
+                        <button type="submit" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-gold-400 hover:bg-gold-500 text-neutral-900 px-8 py-3.5 rounded-xl text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-gold-400/20">
+                            <span class="iconify text-lg" data-icon="mdi:send"></span> Nachricht senden
+                        </button>
+                        <div id="formSuccess" class="hidden mt-4 bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-xl text-sm flex items-center gap-2">
+                            <span class="iconify text-xl" data-icon="mdi:check-circle"></span> Vielen Dank! Wir melden uns in Kürze bei Ihnen.
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="mt-16 rounded-2xl overflow-hidden border border-neutral-200 reveal">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d90244.49455383237!2d9.84461!3d53.5511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b18f0c11e5cf97%3A0x421b2f6a04cf1d0!2sHamburg!5e0!3m2!1sde!2sde!4v1700000000000!5m2!1sde!2sde" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Standort Malermeister & Fliesenleger Hamburg"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-neutral-900 py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+            <h2 class="text-3xl sm:text-4xl font-semibold text-white tracking-tight mb-4">Bereit für Ihr <span class="gold-text">Traumzuhause?</span></h2>
+            <p class="text-neutral-400 text-lg mb-8 max-w-2xl mx-auto">Kontaktieren Sie uns jetzt für eine kostenlose und unverbindliche Beratung. Wir freuen uns auf Ihr Projekt in Hamburg!</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:+491578517129" class="inline-flex items-center justify-center gap-3 bg-gold-400 hover:bg-gold-500 text-neutral-900 px-8 py-4 rounded-xl text-base font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-gold-400/25"><span class="iconify text-xl" data-icon="mdi:phone-in-talk"></span> 0157 8517129</a>
+                <a href="https://wa.me/491578517129?text=Hallo%2C%20ich%20m%C3%B6chte%20gerne%20ein%20Angebot%20anfragen." target="_blank" class="inline-flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl text-base font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-green-500/25"><span class="iconify text-xl" data-icon="mdi:whatsapp"></span> WhatsApp schreiben</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-neutral-950 border-t border-neutral-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div class="sm:col-span-2 lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="w-10 h-10 bg-gradient-to-br from-gold-400 to-gold-600 rounded-lg flex items-center justify-center"><span class="iconify text-neutral-900 text-xl" data-icon="mdi:brush"></span></div>
+                        <div><div class="text-white font-semibold text-sm">MALERMEISTER & FLIESENLEGER</div><div class="text-gold-400 text-[10px] font-medium tracking-[0.2em] uppercase">Hamburg</div></div>
+                    </div>
+                    <p class="text-neutral-500 text-sm leading-relaxed mb-5">Ihr zuverlässiger Partner für Malerarbeiten und Fliesenverlegung in ganz Hamburg.</p>
+                    <div class="flex gap-3">
+                        <a href="https://www.facebook.com/share/1H8GHr74JR/?mibextid=wwXIfr" target="_blank" class="w-10 h-10 bg-neutral-800 hover:bg-gold-400 hover:text-neutral-900 text-neutral-400 rounded-lg flex items-center justify-center transition-all duration-300"><span class="iconify text-lg" data-icon="mdi:facebook"></span></a>
+                        <a href="https://wa.me/491578517129" target="_blank" class="w-10 h-10 bg-neutral-800 hover:bg-green-500 hover:text-white text-neutral-400 rounded-lg flex items-center justify-center transition-all duration-300"><span class="iconify text-lg" data-icon="mdi:whatsapp"></span></a>
+                        <a href="tel:+491578517129" class="w-10 h-10 bg-neutral-800 hover:bg-gold-400 hover:text-neutral-900 text-neutral-400 rounded-lg flex items-center justify-center transition-all duration-300"><span class="iconify text-lg" data-icon="mdi:phone"></span></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-5">Leistungen</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="#leistungen" class="text-neutral-500 hover:text-gold-400 text-sm transition-colors">Malerarbeiten</a></li>
+                        <li><a href="#leistungen" class="text-neutral-500 hover:text-gold-400 text-sm transition-colors">Innenanstrich</a></li>
+                        <li><a href="#leistungen" class="text-neutral-500 hover:text-gold-400 text-sm transition-colors">Fassadenanstrich</a></li>
+                        <li><a href="#leistungen" class="text-neutral-500 hover:text-gold-400 text-sm transition-colors">Tapezierarbeiten</a></li>
+                        <li><a href="#leistungen" class="text-neutral-500 hover:text-gold-400 text-sm transition-colors">Fliesenverlegung</a></li>
+                        <li><a href="#leistungen" class="text-neutral-500 hover:text-gold-400 text-sm transition-colors">Badsanierung</a></li>
+                        <li><a href="#leistungen" class="text-neutral-500 hover:text-gold-400 text-sm transition-colors">Renovierung</a></li>
+                        <li><a href="#leistungen" class="text-neutral-500 hover:text-gold-400 text-sm transition-colors">Innenausbau</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-5">Navigation</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="#startseite" class="text-neutral-500 hover:text-gold-400 text-sm transition-colors">Startseite</a></li>
+                        <li><a href="#ueber-uns" class="text-neutral-500 hover:text-gold-400 text-sm transition-colors">Über uns</a></li>
+                        <li><a href="#galerie" class="text-neutral-500 hover:text-gold-400 text-sm transition-colors">Galerie</a></li>
+                        <li><a href="#bewertungen" class="text-neutral-500 hover:text-gold-400 text-sm transition-colors">Bewertungen</a></li>
+                        <li><a href="#kontakt" class="text-neutral-500 hover:text-gold-400 text-sm transition-colors">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-5">Kontakt</h4>
+                    <ul class="space-y-3">
+                        <li><a href="tel:+491578517129" class="flex items-center gap-2 text-neutral-500 hover:text-gold-400 text-sm transition-colors"><span class="iconify" data-icon="mdi:phone"></span> 0157 8517129</a></li>
+                        <li><a href="https://wa.me/491578517129" target="_blank" class="flex items-center gap-2 text-neutral-500 hover:text-green-400 text-sm transition-colors"><span class="iconify" data-icon="mdi:whatsapp"></span> WhatsApp</a></li>
+                        <li><div class="flex items-start gap-2 text-neutral-500 text-sm"><span class="iconify mt-0.5" data-icon="mdi:map-marker"></span><span>Hamburg<br>und Umgebung</span></div></li>
+                        <li><div class="flex items-start gap-2 text-neutral-500 text-sm"><span class="iconify mt-0.5" data-icon="mdi:clock-outline"></span><span>Mo–Fr: 07–18 Uhr<br>Sa: 08–14 Uhr</span></div></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-neutral-800 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p class="text-neutral-600 text-xs">© 2025 Malermeister & Fliesenleger Hamburg. Alle Rechte vorbehalten.</p>
+                <p class="text-neutral-700 text-xs">Maler Hamburg · Malermeister Hamburg · Fliesenleger Hamburg · Renovierung Hamburg</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/491578517129?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Leistungen." target="_blank" class="whatsapp-float fixed bottom-6 right-6 z-50 w-16 h-16 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-2xl shadow-green-500/30 transition-colors group" aria-label="WhatsApp Kontakt">
+        <span class="iconify text-white text-3xl" data-icon="mdi:whatsapp"></span>
+        <div class="absolute right-20 bg-neutral-900 text-white text-sm font-medium px-4 py-2 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">WhatsApp schreiben<div class="absolute top-1/2 -right-1.5 -translate-y-1/2 w-3 h-3 bg-neutral-900 rotate-45"></div></div>
+    </a>
+
+    <!-- BACK TO TOP -->
+    <button id="backToTop" class="fixed bottom-6 left-6 z-50 w-12 h-12 bg-neutral-900/80 hover:bg-gold-400 hover:text-neutral-900 text-white rounded-full flex items-center justify-center shadow-xl transition-all duration-300 opacity-0 translate-y-4 pointer-events-none" aria-label="Nach oben scrollen">
+        <span class="iconify text-xl" data-icon="mdi:chevron-up"></span>
+    </button>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 80) navbar.classList.add('bg-neutral-900/95','backdrop-blur-xl','shadow-2xl','border-b','border-neutral-800/50');
+            else navbar.classList.remove('bg-neutral-900/95','backdrop-blur-xl','shadow-2xl','border-b','border-neutral-800/50');
+        });
+
+        const menuBtn = document.getElementById('menuBtn'), closeMenuBtn = document.getElementById('closeMenu'), mobileMenu = document.getElementById('mobileMenu'), menuOverlay = document.getElementById('menuOverlay');
+        function openMenu() { mobileMenu.classList.add('open'); menuOverlay.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
+        function closeMenu() { mobileMenu.classList.remove('open'); menuOverlay.classList.add('hidden'); document.body.style.overflow = ''; }
+        menuBtn.addEventListener('click', openMenu);
+        closeMenuBtn.addEventListener('click', closeMenu);
+        menuOverlay.addEventListener('click', closeMenu);
+        document.querySelectorAll('.mobile-nav-link').forEach(l => l.addEventListener('click', closeMenu));
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => { if (entry.isIntersecting) { setTimeout(() => entry.target.classList.add('active'), i * 80); revealObserver.unobserve(entry.target); } });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        let countersStarted = false;
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !countersStarted) {
+                    countersStarted = true;
+                    document.querySelectorAll('[data-count]').forEach(el => {
+                        const target = parseInt(el.getAttribute('data-count')), start = performance.now();
+                        function update(now) { const p = Math.min((now - start) / 2000, 1); el.textContent = Math.floor((1 - Math.pow(1 - p, 3)) * target) + '+'; if (p < 1) requestAnimationFrame(update); else el.textContent = target + '+'; }
+                        requestAnimationFrame(update);
+                    });
+                }
+            });
+        }, { threshold: 0.3 });
+        document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
+
+        const sections = document.querySelectorAll('section[id]');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + current));
+        });
+
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 600) { backToTopBtn.classList.remove('opacity-0','translate-y-4','pointer-events-none'); backToTopBtn.classList.add('opacity-100','translate-y-0'); }
+            else { backToTopBtn.classList.add('opacity-0','translate-y-4','pointer-events-none'); backToTopBtn.classList.remove('opacity-100','translate-y-0'); }
+        });
+        backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        const lightbox = document.getElementById('lightbox'), lightboxImg = document.getElementById('lightboxImg');
+        function openLightbox(el) { const img = el.querySelector('img'); lightboxImg.src = img.src; lightboxImg.alt = img.alt; lightbox.classList.remove('hidden'); lightbox.classList.add('flex'); document.body.style.overflow = 'hidden'; }
+        function closeLightbox(e) { if (e.target === lightbox || e.currentTarget.tagName === 'BUTTON') { lightbox.classList.add('hidden'); lightbox.classList.remove('flex'); document.body.style.overflow = ''; } }
+        document.addEventListener('keydown', e => { if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) { lightbox.classList.add('hidden'); lightbox.classList.remove('flex'); document.body.style.overflow = ''; } });
+
+        const contactForm = document.getElementById('contactForm'), formSuccess = document.getElementById('formSuccess');
+        contactForm.addEventListener('submit', e => {
+            e.preventDefault();
+            const btn = contactForm.querySelector('button[type="submit"]'), orig = btn.innerHTML;
+            btn.innerHTML = '<span class="iconify animate-spin text-lg" data-icon="mdi:loading"></span> Wird gesendet...'; btn.disabled = true;
+            setTimeout(() => { btn.innerHTML = orig; btn.disabled = false; formSuccess.classList.remove('hidden'); contactForm.reset(); setTimeout(() => formSuccess.classList.add('hidden'), 5000); }, 1500);
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', function(e) { e.preventDefault(); const t = document.querySelector(this.getAttribute('href')); if (t) window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' }); });
+        });
+    </script>
+</body>
+</html>
